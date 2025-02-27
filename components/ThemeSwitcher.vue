@@ -8,6 +8,7 @@
       variant="ghost"
       :class="{ 'text-primary': $colorMode.preference === theme }"
       @click="$colorMode.preference = theme"
+      :aria-label="`Turn on ${theme} theme`"
     />
   </div>
 </template>
