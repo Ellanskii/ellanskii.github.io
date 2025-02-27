@@ -3,7 +3,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@vueuse/nuxt',
     '@unocss/nuxt',
-    '@nuxtjs/color-mode',
     '@nuxtjs/fontaine',
   ],
 
