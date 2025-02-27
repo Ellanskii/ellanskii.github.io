@@ -4,15 +4,22 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@nuxtjs/color-mode',
-    '@nuxtjs/fontaine'
+    '@nuxtjs/fontaine',
   ],
 
   app: {
     head: {
       title: 'My Personal Site',
       meta: [
-        { name: 'description', content: 'My personal site with CV and articles' },
+        {
+          name: 'description',
+          content: 'My personal site with CV and articles',
+        },
       ],
+      htmlAttrs: {
+        // FIXME поправить для i18n
+        lang: 'ru-RU',
+      },
     },
   },
 
@@ -24,13 +31,21 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/', '/cv', '/articles']
-    }
+      routes: ['/', '/cv', '/articles'],
+    },
   },
 
   typescript: {
     strict: true,
   },
 
-  compatibilityDate: '2025-02-26'
-})
+  experimental: {
+    // when using generate, payload js assets included in sw precache manifest
+    // but missing on offline, disabling extraction it until fixed
+    payloadExtraction: false,
+    renderJsonPayloads: true,
+    typedPages: true,
+  },
+
+  compatibilityDate: '2025-02-26',
+});
