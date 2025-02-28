@@ -6,4 +6,4 @@ dist
 .env
 .idea/
 public/assets/fonts
-.data/content/contents.sqlite
+.data
