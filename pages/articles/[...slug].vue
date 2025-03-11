@@ -10,7 +10,9 @@ useSeoMeta({
 
 <template>
   <article class="prose dark:prose-invert mx-auto" v-if="data">
-    <p class="text-sm text-gray-600 dark:text-gray-400">{{ new Date(data?.meta.date).toLocaleDateString() }}</p>
+    <p class="text-sm text-gray-600 dark:text-gray-400">
+      <LocaleDate :date="(data.meta.date as string)" />
+    </p>
     <ContentRenderer :value="data" />
   </article>
   <div v-else>Page not found</div>
