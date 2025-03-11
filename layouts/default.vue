@@ -7,7 +7,7 @@
             My Site
           </NuxtLink>
           <div class="flex items-center gap-4">
-            <NuxtLink to="/cv" class="hover:text-primary">
+            <NuxtLink to="/resume" class="hover:text-primary">
               CV
             </NuxtLink>
             <NuxtLink to="/articles" class="hover:text-primary">
