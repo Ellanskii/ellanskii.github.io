@@ -13,7 +13,9 @@
             <NuxtLink to="/articles" class="hover:text-primary">
               Articles
             </NuxtLink>
-            <ThemeSwitcher />
+            <ClientOnly>
+              <ThemeSwitcher />
+            </ClientOnly>
           </div>
         </div>
       </nav>
