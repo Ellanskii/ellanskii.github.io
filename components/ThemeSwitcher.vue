@@ -15,11 +15,16 @@ function toggleTheme() {
 </script>
 
 <template>
-  <UButton
-    :icon="color.value === 'dark' ? 'i-carbon-sun' : 'i-carbon-moon'"
-    color="gray"
-    variant="ghost"
-    @click="toggleTheme"
-    :aria-label="`Turn off ${color.preference} theme`"
-  />
+  <ClientOnly>
+    <UButton
+      :icon="color.value === 'dark' ? 'i-carbon-sun' : 'i-carbon-moon'"
+      color="gray"
+      variant="ghost"
+      @click="toggleTheme"
+      :aria-label="`Turn off ${color.preference} theme`"
+    />
+    <template #fallback>
+      <div class="w-8 h-8" />
+    </template>
+  </ClientOnly>
 </template>

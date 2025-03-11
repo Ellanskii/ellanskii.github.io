@@ -13,12 +13,7 @@
             <NuxtLink to="/articles" class="hover:text-primary">
               Articles
             </NuxtLink>
-            <ClientOnly>
-              <ThemeSwitcher />
-              <template #fallback>
-                <div class="w-8 h-8" />
-              </template>
-            </ClientOnly>
+            <ThemeSwitcher />
           </div>
         </div>
       </nav>
