@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
@@ -45,6 +47,13 @@ export default defineNuxtConfig({
     payloadExtraction: false,
     renderJsonPayloads: true,
     typedPages: true,
+  },
+
+  hooks: {
+    'nitro:build:public-assets'(nitro) {
+      const outputPath = nitro.options.output.publicDir;
+      fs.writeFileSync(`${outputPath}/.nojekyll`, '');
+    },
   },
 
   compatibilityDate: '2025-02-26',
