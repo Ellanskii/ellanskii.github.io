@@ -15,6 +15,9 @@
             </NuxtLink>
             <ClientOnly>
               <ThemeSwitcher />
+              <template #fallback>
+                <div class="w-8 h-8" />
+              </template>
             </ClientOnly>
           </div>
         </div>
