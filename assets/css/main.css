@@ -3,10 +3,6 @@
 @import '@nuxt/ui';
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
-
-  --breakpoint-3xl: 1920px;
-
   --color-purple-heart-50: #F8F0FE;
   --color-purple-heart-100: #F3E7FE;
   --color-purple-heart-200: #E1C5FC;
