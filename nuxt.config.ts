@@ -9,6 +9,8 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
   ],
 
+  css: ['~/assets/css/main.css'],
+
   app: {
     head: {
       title: 'My Personal Site',
