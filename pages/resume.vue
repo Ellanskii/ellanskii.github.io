@@ -13,7 +13,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <div v-if="page" class="prose dark:prose-invert mx-auto">
-    <ContentRenderer :value="page" />
-  </div>
+  <article v-if="page" class="prose dark:prose-invert mx-auto">
+    <ResumeHeader />
+    <ResumeJobsList />
+    <!-- <ContentRenderer :value="page" /> -->
+  </article>
 </template>
