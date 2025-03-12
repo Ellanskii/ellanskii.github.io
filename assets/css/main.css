@@ -1,2 +1,21 @@
 @import 'tailwindcss' theme(static);
+@plugin '@tailwindcss/typography';
 @import '@nuxt/ui';
+
+@theme static {
+  --font-sans: 'Public Sans', sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-purple-heart-50: #F8F0FE;
+  --color-purple-heart-100: #F3E7FE;
+  --color-purple-heart-200: #E1C5FC;
+  --color-purple-heart-300: #D0A3FA;
+  --color-purple-heart-400: #B56EF7;
+  --color-purple-heart-500: #790CDF;
+  --color-purple-heart-600: #6E0BCB;
+  --color-purple-heart-700: #610AB3;
+  --color-purple-heart-800: #4F0891;
+  --color-purple-heart-900: #3A066A;
+  --color-purple-heart-950: #270449;
+}

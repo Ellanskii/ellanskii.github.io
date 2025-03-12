@@ -7,7 +7,7 @@ import jobs from './jobs.json'
     <h2>Work Experience</h2>
     <ul class="not-prose flex flex-col gap-2">
       <li v-for="(job, index) in jobs" :key="index">
-        <UCard variant="solid">
+        <UCard variant="outline">
           <template #header>
             <h3>{{ job.company }}</h3>
             <p>{{ job.position }}</p>

@@ -11,10 +11,10 @@
     <UButton 
       label="t.me/ellanski" 
       icon="i-logos:telegram" 
-      variant="solid"
-      color="gray"
+      variant="subtle"
+      color="primary"
       size="lg"
-      :ui="{ rounded: 'rounded-full' }" 
+      class="rounded-full"
       to="https://t.me/ellanski" 
       target="_blank" 
       rel="noopener noreferrer"
