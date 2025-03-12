@@ -9,13 +9,13 @@
   </header>
   <footer class="not-prose flex gap-2">
     <UButton 
-      label="t.me/ellanski" 
+      label="t.me/ellanskii" 
       icon="i-logos:telegram" 
       variant="subtle"
-      color="primary"
+      color="secondary"
       size="lg"
       class="rounded-full"
-      to="https://t.me/ellanski" 
+      to="https://t.me/ellanskii" 
       target="_blank" 
       rel="noopener noreferrer"
     />
