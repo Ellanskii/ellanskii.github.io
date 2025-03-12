@@ -8,3 +8,4 @@ dist
 public/assets/fonts
 .data
 public/.DS_Store
+.data/content/contents.sqlite
