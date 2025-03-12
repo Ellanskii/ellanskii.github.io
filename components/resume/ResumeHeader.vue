@@ -4,7 +4,7 @@
   <header>
     <h1>
       <span class="text-3xl">Илья Элланский</span><br>
-      <span class="text-primary">Senior Frontend Developer</span>
+      <span class="text-(--ui-primary)">Senior Frontend Developer</span>
     </h1>
   </header>
   <footer class="not-prose flex gap-2">
