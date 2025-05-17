@@ -5,9 +5,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@vueuse/nuxt',
-    '@unocss/nuxt',
+    // '@unocss/nuxt',
     '@nuxtjs/fontaine',
   ],
+
+  css: ['~/assets/css/main.css'],
 
   app: {
     head: {
@@ -33,7 +35,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/', '/cv', '/articles'],
+      routes: ['/', '/resume', '/articles'],
     },
   },
 

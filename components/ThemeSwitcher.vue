@@ -18,7 +18,7 @@ function toggleTheme() {
   <ClientOnly>
     <UButton
       :icon="color.value === 'dark' ? 'i-carbon-sun' : 'i-carbon-moon'"
-      color="gray"
+      color="neutral"
       variant="ghost"
       @click="toggleTheme"
       :aria-label="`Turn off ${color.preference} theme`"
