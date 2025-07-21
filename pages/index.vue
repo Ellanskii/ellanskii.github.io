@@ -7,10 +7,10 @@
     </p>
   </div>
   <div class="flex gap-4 mt-8">
-    <UButton to="/resume">
+    <UButton to="/resume/">
       View My CV
     </UButton>
-    <UButton to="/articles" variant="outline">
+    <UButton to="/articles/" variant="outline">
       Read Articles
     </UButton>
   </div>

@@ -14,7 +14,7 @@
         </template>
         <p>{{ article.description }}</p>
         <template #footer>
-          <UButton variant="ghost" :to="`/articles/${article.slug}`">
+          <UButton variant="ghost" :to="`/articles/${article.slug}/`">
             Read More
           </UButton>
         </template>
