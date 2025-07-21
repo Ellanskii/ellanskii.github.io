@@ -51,12 +51,12 @@ export default defineNuxtConfig({
     typedPages: true,
   },
 
-  hooks: {
-    'nitro:build:public-assets'(nitro) {
-      const outputPath = nitro.options.output.publicDir;
-      fs.writeFileSync(`${outputPath}/.nojekyll`, '');
-    },
-  },
+  // hooks: {
+  //   'nitro:build:public-assets'(nitro) {
+  //     const outputPath = nitro.options.output.publicDir;
+  //     fs.writeFileSync(`${outputPath}/.nojekyll`, '');
+  //   },
+  // },
 
   compatibilityDate: '2025-02-26',
 });
