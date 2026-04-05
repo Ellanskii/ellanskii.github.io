@@ -1,4 +1,5 @@
 ---
+slug: getting-started-with-nuxt3
 title: Getting Started with Nuxt 3
 description: A comprehensive guide to getting started with Nuxt 3 and its amazing features
 date: 2024-03-01

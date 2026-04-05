@@ -1,4 +1,5 @@
 ---
+slug: web-performance
 title: Web Performance Optimization
 description: Learn how to optimize your web applications for better performance
 date: 2024-03-03

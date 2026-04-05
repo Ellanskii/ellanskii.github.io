@@ -1,4 +1,5 @@
 ---
+slug: mastering-typescript
 title: Mastering TypeScript
 description: Essential TypeScript concepts and best practices for modern web development
 date: 2024-03-02
