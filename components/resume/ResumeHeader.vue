@@ -18,6 +18,7 @@
       to="https://t.me/ellanskii" 
       target="_blank" 
       rel="noopener noreferrer"
+      data-umami-event="tg_click"
     />
   </footer>
   <p class="lead">Experienced in building scalable web applications and passionate about modern web technologies.</p>
