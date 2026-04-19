@@ -1,12 +1,11 @@
-import fs from 'fs';
-
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/content',
-    '@nuxt/ui',
-    '@vueuse/nuxt',
+    '@nuxt/content', 
+    '@nuxt/ui', 
+    '@vueuse/nuxt', 
     // '@unocss/nuxt',
-    '@nuxtjs/fontaine',
+    '@nuxtjs/fontaine', 
+    'nuxt-umami'
   ],
 
   css: ['~/assets/css/main.css'],
@@ -57,6 +56,10 @@ export default defineNuxtConfig({
   //     fs.writeFileSync(`${outputPath}/.nojekyll`, '');
   //   },
   // },
+
+  umami: {
+    ignoreLocalhost: true,
+  },
 
   compatibilityDate: '2025-02-26',
 });
