@@ -4,7 +4,7 @@
   <header>
     <h1>
       <span class="text-3xl">Илья Элланский</span><br>
-      <span class="text-(--ui-primary)">Senior Frontend Developer</span>
+      <span class="text-primary">Senior Frontend Developer</span>
     </h1>
   </header>
   <footer class="not-prose flex gap-2">
@@ -18,7 +18,7 @@
       to="https://t.me/ellanskii" 
       target="_blank" 
       rel="noopener noreferrer"
-      data-umami-event="tg_click"
+      @click="umTrackEvent('tg_link_click')"
     />
   </footer>
   <p class="lead">Experienced in building scalable web applications and passionate about modern web technologies.</p>
