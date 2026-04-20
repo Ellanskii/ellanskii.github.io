@@ -62,5 +62,11 @@ export default defineNuxtConfig({
     performance: true,
   },
 
+  vite: {
+    build: {
+      cssCodeSplit: true,
+    }
+  },
+
   compatibilityDate: '2025-02-26',
 });
