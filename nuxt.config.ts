@@ -50,16 +50,43 @@ export default defineNuxtConfig({
     typedPages: true,
   },
 
-  // hooks: {
-  //   'nitro:build:public-assets'(nitro) {
-  //     const outputPath = nitro.options.output.publicDir;
-  //     fs.writeFileSync(`${outputPath}/.nojekyll`, '');
-  //   },
-  // },
+  hooks: {
+    async 'nitro:build:public-assets'(nitro) {
+      const { readFileSync, writeFileSync, readdirSync, statSync } = await import('node:fs')
+      const { join } = await import('node:path')
+      const { default: Beasties } = await import('beasties')
+
+      const outputDir = nitro.options.output.publicDir
+
+      const beasties = new Beasties({
+        path: outputDir,
+        logLevel: 'silent',
+      })
+
+      const findHtml = (dir: string): string[] =>
+        readdirSync(dir).flatMap((entry) => {
+          const full = join(dir, entry)
+          return statSync(full).isDirectory() ? findHtml(full) : full.endsWith('.html') ? [full] : []
+        })
+
+      await Promise.all(
+        findHtml(outputDir).map(async (file) => {
+          const processed = await beasties.process(readFileSync(file, 'utf-8'))
+          writeFileSync(file, processed)
+        }),
+      )
+    },
+  },
 
   umami: {
     ignoreLocalhost: true,
     performance: true,
+  },
+
+  vite: {
+    build: {
+      cssCodeSplit: true,
+    }
   },
 
   compatibilityDate: '2025-02-26',
