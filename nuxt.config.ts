@@ -59,6 +59,7 @@ export default defineNuxtConfig({
 
   umami: {
     ignoreLocalhost: true,
+    performance: true,
   },
 
   compatibilityDate: '2025-02-26',

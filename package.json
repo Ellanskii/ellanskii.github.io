@@ -34,7 +34,7 @@
     "eslint": "^10.2.0",
     "eslint-plugin-format": "^2.0.1",
     "nuxt": "^4.4.2",
-    "nuxt-umami": "3.2.1",
+    "nuxt-umami": "github:Ellanskii/nuxt-umami#main",
     "pinia": "^3.0.4",
     "typescript": "^6.0.2",
     "vue-tsc": "^3.2.6"

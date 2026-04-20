@@ -71,8 +71,8 @@ importers:
         specifier: ^4.4.2
         version: 4.4.2(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.6)(@types/node@25.5.2)(@vue/compiler-sfc@3.5.32)(better-sqlite3@12.8.0)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.8.0))(eslint@10.2.0(jiti@2.6.1))(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.2)(optionator@0.9.4)(pinia@3.0.4(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2)))(rollup-plugin-visualizer@7.0.1(rollup@4.60.1))(rollup@4.60.1)(srvx@0.11.15)(terser@5.46.1)(typescript@6.0.2)(vite@6.4.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3))(vue-tsc@3.2.6(typescript@6.0.2))(yaml@2.8.3)
       nuxt-umami:
-        specifier: 3.2.1
-        version: 3.2.1(magicast@0.5.2)
+        specifier: github:Ellanskii/nuxt-umami#main
+        version: https://codeload.github.com/Ellanskii/nuxt-umami/tar.gz/2acfa0bf42857f5b655651bf79950808707714f9(magicast@0.5.2)
       pinia:
         specifier: ^3.0.4
         version: 3.0.4(typescript@6.0.2)(vue@3.5.32(typescript@6.0.2))
@@ -6035,8 +6035,9 @@ packages:
     resolution: {integrity: sha512-2/mSSqutOX8t+r8cAX1yUYwAPBqicPO5Rfum3XaHVszxKCF4tXEXBiPGfJY9Zn69x/CIeOdw+aM9wmHzQ5Q+lA==}
     hasBin: true
 
-  nuxt-umami@3.2.1:
-    resolution: {integrity: sha512-82cf3kcrMn4Iq0rJ2Blfl48AqLWqRubEpxOinOoxqW7taZAd5SgZcCdCj7y4qXSt0W5DhBYgaq4IboyGFHoVUQ==}
+  nuxt-umami@https://codeload.github.com/Ellanskii/nuxt-umami/tar.gz/2acfa0bf42857f5b655651bf79950808707714f9:
+    resolution: {tarball: https://codeload.github.com/Ellanskii/nuxt-umami/tar.gz/2acfa0bf42857f5b655651bf79950808707714f9}
+    version: 3.4.0
 
   nuxt@4.4.2:
     resolution: {integrity: sha512-iWVFpr/YEqVU/CenqIHMnIkvb2HE/9f+q8oxZ+pj2et+60NljGRClCgnmbvGPdmNFE0F1bEhoBCYfqbDOCim3Q==}
@@ -15051,9 +15052,9 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  nuxt-umami@3.2.1(magicast@0.5.2):
+  nuxt-umami@https://codeload.github.com/Ellanskii/nuxt-umami/tar.gz/2acfa0bf42857f5b655651bf79950808707714f9(magicast@0.5.2):
     dependencies:
-      '@nuxt/kit': 3.21.2(magicast@0.5.2)
+      '@nuxt/kit': 4.4.2(magicast@0.5.2)
       request-ip: 3.3.0
     transitivePeerDependencies:
       - magicast
