@@ -29,6 +29,7 @@
     "@unocss/nuxt": "66.6.7",
     "@vite-pwa/nuxt": "^1.1.1",
     "@vueuse/nuxt": "^14.2.1",
+    "beasties": "^0.4.2",
     "better-sqlite3": "^12.8.0",
     "consola": "^3.4.2",
     "eslint": "^10.2.0",
