@@ -9,3 +9,4 @@ public/assets/fonts
 .data
 public/.DS_Store
 .data/content/contents.sqlite
+content/.DS_Store
