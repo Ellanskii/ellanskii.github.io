@@ -1,0 +1,30 @@
+{
+  "site": {
+    "title": "Илья Элланский",
+    "description": "Senior Frontend Developer с 9+ годами опыта. Vue 3, Nuxt 4, TypeScript."
+  },
+  "nav": {
+    "resume": "Резюме",
+    "notes": "Заметки"
+  },
+  "home": {
+    "name": "Илья Элланский",
+    "role": "Senior Frontend Developer",
+    "tagline": "9+ лет коммерческого опыта. Vue 3, Nuxt 4, TypeScript, высоконагруженные веб-приложения.",
+    "cta_resume": "Смотреть резюме",
+    "cta_notes": "Читать заметки"
+  },
+  "resume": {
+    "print": "Распечатать",
+    "telegram": "Написать в Telegram"
+  },
+  "notes": {
+    "title": "Заметки",
+    "subtitle": "Мысли о фронтенде, инструментах и процессах",
+    "read_more": "Читать далее",
+    "empty": "Заметок пока нет"
+  },
+  "footer": {
+    "copyright": "Илья Элланский"
+  }
+}
