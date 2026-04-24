@@ -47,7 +47,7 @@ function handlePrint() {
       />
     </div>
 
-    <article v-if="page" class="prose dark:prose-invert max-w-none">
+    <article v-if="page" class="prose dark:prose-invert max-w-none prose-code:before:content-none prose-code:after:content-none">
       <ContentRenderer :value="page" />
     </article>
   </div>
