@@ -10,6 +10,9 @@ const props = withDefaults(defineProps<{
   intensity: 3,
 })
 
+defineOptions({ inheritAttrs: false })
+const attrs = useAttrs()
+
 const colorMode = useColorMode()
 const colorProbe = ref<HTMLElement>()
 
@@ -129,6 +132,7 @@ watch(() => props.animate, (val) => val ? startAnimation() : stopAnimation())
   <ClientOnly>
     <component
       :is="tag"
+      v-bind="attrs"
       class="glitch-root"
       :class="resolvedMode"
       @mouseenter="onEnter"
@@ -156,7 +160,7 @@ watch(() => props.animate, (val) => val ? startAnimation() : stopAnimation())
     </component>
 
     <template #fallback>
-      <component :is="tag">
+      <component :is="tag" v-bind="attrs">
         <slot>{{ text }}</slot>
       </component>
     </template>
@@ -189,7 +193,6 @@ watch(() => props.animate, (val) => val ? startAnimation() : stopAnimation())
 .gl-layer {
   position: absolute;
   top: 0; left: 0;
-  white-space: nowrap;
   pointer-events: none;
   user-select: none;
   transform: translate(var(--dx, 0px), var(--dy, 0px));
