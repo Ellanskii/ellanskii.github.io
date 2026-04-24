@@ -160,7 +160,7 @@ watch(() => props.animate, (val) => val ? startAnimation() : stopAnimation())
     </component>
 
     <template #fallback>
-      <component :is="tag" v-bind="attrs">
+      <component :is="tag" v-bind="attrs" class="glitch-root">
         <slot>{{ text }}</slot>
       </component>
     </template>
