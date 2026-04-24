@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Ilya Ellansky",
+    "title": "Ilia Ellanskii",
     "description": "Senior Frontend Developer with 9+ years of experience. Vue 3, Nuxt 4, TypeScript."
   },
   "nav": {
@@ -8,7 +8,7 @@
     "articles": "Notes"
   },
   "home": {
-    "name": "Ilya Ellansky",
+    "name": "Ilia Ellanskii",
     "role": "Senior Frontend Developer",
     "tagline": "9+ years of commercial experience. Vue 3, Nuxt 4, TypeScript, high-load web applications.",
     "cta_resume": "View Resume",
@@ -25,6 +25,6 @@
     "empty": "No articles yet"
   },
   "footer": {
-    "copyright": "Ilya Ellansky"
+    "copyright": "Ilia Ellanskii"
   }
 }
