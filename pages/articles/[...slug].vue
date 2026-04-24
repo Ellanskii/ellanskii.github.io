@@ -19,7 +19,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <article v-if="data" class="prose dark:prose-invert mx-auto">
+  <article v-if="data" class="prose dark:prose-invert mx-auto prose-code:before:content-none prose-code:after:content-none">
     <p class="text-sm text-gray-500 dark:text-gray-400 not-prose mb-6">
       <LocaleDate :date="(data.date as string)" />
     </p>
