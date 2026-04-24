@@ -5,24 +5,24 @@
   },
   "nav": {
     "resume": "Resume",
-    "notes": "Notes"
+    "articles": "Notes"
   },
   "home": {
     "name": "Ilya Ellansky",
     "role": "Senior Frontend Developer",
     "tagline": "9+ years of commercial experience. Vue 3, Nuxt 4, TypeScript, high-load web applications.",
     "cta_resume": "View Resume",
-    "cta_notes": "Read Notes"
+    "cta_articles": "Read Notes"
   },
   "resume": {
     "print": "Print",
     "telegram": "Message on Telegram"
   },
-  "notes": {
+  "articles": {
     "title": "Notes",
     "subtitle": "Thoughts on frontend, tools, and processes",
     "read_more": "Read More",
-    "empty": "No notes yet"
+    "empty": "No articles yet"
   },
   "footer": {
     "copyright": "Ilya Ellansky"

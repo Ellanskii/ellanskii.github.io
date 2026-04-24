@@ -28,7 +28,7 @@ useHead(() => ({ htmlAttrs: i18nHead.value.htmlAttrs }))
               class="text-sm hover:text-primary transition-colors"
               active-class="text-primary font-medium"
             >
-              {{ $t('nav.notes') }}
+              {{ $t('nav.articles') }}
             </NuxtLink>
             <div class="flex items-center gap-1 text-sm font-medium">
               <NuxtLink

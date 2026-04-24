@@ -25,7 +25,7 @@ useSeoMeta({
           {{ $t('home.cta_resume') }}
         </UButton>
         <UButton :to="localePath({ path:'/articles' })" variant="outline" size="xl">
-          {{ $t('home.cta_notes') }}
+          {{ $t('home.cta_articles') }}
         </UButton>
       </div>
     </div>

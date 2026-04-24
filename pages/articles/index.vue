@@ -6,15 +6,15 @@ const { data: articles } = await useAsyncData('articles-list',
 )
 
 useSeoMeta({
-  title: t('notes.title'),
-  description: t('notes.subtitle'),
+  title: t('articles.title'),
+  description: t('articles.subtitle'),
 })
 </script>
 
 <template>
   <div class="prose dark:prose-invert mx-auto">
-    <h1>{{ $t('notes.title') }}</h1>
-    <p class="lead">{{ $t('notes.subtitle') }}</p>
+    <h1>{{ $t('articles.title') }}</h1>
+    <p class="lead">{{ $t('articles.subtitle') }}</p>
 
     <div v-if="articles?.length" class="not-prose flex flex-col gap-4 mt-8">
       <UCard
@@ -38,14 +38,14 @@ useSeoMeta({
         </p>
         <template #footer>
           <UButton variant="ghost" size="sm" :to="article.path">
-            {{ $t('notes.read_more') }}
+            {{ $t('articles.read_more') }}
           </UButton>
         </template>
       </UCard>
     </div>
 
     <p v-else class="not-prose text-gray-500 mt-8">
-      {{ $t('notes.empty') }}
+      {{ $t('articles.empty') }}
     </p>
   </div>
 </template>
