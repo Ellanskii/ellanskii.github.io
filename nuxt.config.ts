@@ -27,6 +27,7 @@ export default defineNuxtConfig({
       { code: 'ru', language: 'ru-RU', name: 'Русский', file: 'ru.json' },
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
     ],
+    baseUrl: process.env.BASE_URL || 'https://ellanskii.github.io/',
     langDir: 'locales',
     defaultLocale: 'ru',
     strategy: 'prefix_except_default',
