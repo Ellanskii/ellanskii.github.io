@@ -1,28 +1,39 @@
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/content', 
-    '@nuxt/ui', 
-    '@vueuse/nuxt', 
-    // '@unocss/nuxt',
-    '@nuxtjs/fontaine', 
-    'nuxt-umami'
+    '@nuxt/content',
+    '@nuxt/ui',
+    '@vueuse/nuxt',
+    '@nuxtjs/fontaine',
+    '@nuxtjs/i18n',
+    'nuxt-umami',
   ],
 
   css: ['~/assets/css/main.css'],
 
   app: {
     head: {
-      title: 'My Personal Site',
+      title: 'Илья Элланский — Senior Frontend Developer',
       meta: [
         {
           name: 'description',
-          content: 'My personal site with CV and articles',
+          content: 'Senior Frontend Developer с 9+ годами опыта. Vue 3, Nuxt 4, TypeScript.',
         },
       ],
-      htmlAttrs: {
-        // FIXME поправить для i18n
-        lang: 'ru-RU',
-      },
+    },
+  },
+
+  i18n: {
+    locales: [
+      { code: 'ru', language: 'ru-RU', name: 'Русский', file: 'ru.json' },
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+    ],
+    langDir: 'locales',
+    defaultLocale: 'ru',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_locale',
+      redirectOn: 'root',
     },
   },
 
@@ -34,7 +45,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/', '/resume', '/articles'],
+      routes: ['/', '/resume', '/articles', '/en', '/en/resume', '/en/articles'],
     },
   },
 
@@ -86,8 +97,8 @@ export default defineNuxtConfig({
   vite: {
     build: {
       cssCodeSplit: true,
-    }
+    },
   },
 
   compatibilityDate: '2025-02-26',
-});
+})

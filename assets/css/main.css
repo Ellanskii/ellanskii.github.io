@@ -15,3 +15,36 @@
   --color-purple-heart-900: #3A066A;
   --color-purple-heart-950: #270449;
 }
+
+@media print {
+  @page {
+    margin: 1.5cm 2cm;
+  }
+
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .prose h1 { font-size: 20pt; }
+  .prose h2 { font-size: 14pt; margin-top: 1em; }
+  .prose h3 { font-size: 12pt; }
+
+  /* Show href after links */
+  .prose a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+    word-break: break-all;
+  }
+
+  /* Avoid page breaks inside job entries */
+  .prose h3 {
+    break-after: avoid;
+  }
+
+  .prose ul, .prose ol {
+    break-inside: avoid;
+  }
+}
