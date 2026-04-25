@@ -3,9 +3,9 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@vueuse/nuxt',
-    '@nuxtjs/fontaine',
     '@nuxtjs/i18n',
     'nuxt-umami',
+    '@nuxt/fonts',
   ],
 
   css: ['~/assets/css/main.css'],

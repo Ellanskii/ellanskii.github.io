@@ -2,7 +2,10 @@
 @plugin '@tailwindcss/typography';
 @import '@nuxt/ui';
 
-@theme static {
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Inter", "sans-serif";
+
   --color-purple-heart-50: #F8F0FE;
   --color-purple-heart-100: #F3E7FE;
   --color-purple-heart-200: #E1C5FC;
