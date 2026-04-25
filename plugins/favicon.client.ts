@@ -34,7 +34,7 @@ export default defineNuxtPlugin(() => {
     const img = c.getImageData(0, 0, SIZE, SIZE)
     const d = img.data
     for (let i = 0; i < d.length; i += 4) {
-      if (d[i]! > 250 && d[i + 1]! > 250 && d[i + 2]! > 250) d[i + 3] = 0
+      if (d[i]! > 200 && d[i + 1]! > 200 && d[i + 2]! > 200) d[i + 3] = 0
     }
     c.putImageData(img, 0, 0)
   }
@@ -47,7 +47,7 @@ export default defineNuxtPlugin(() => {
     function scheduleGlitch() {
       setTimeout(() => {
         glitching = true
-        for (const o of offsets) { o.dx=rng(3); o.dy=rng(2) }
+        for (const o of offsets) { o.dx=rng(4); o.dy=rng(3) }
         setTimeout(() => {
           glitching = false
           for (const o of offsets) { o.dx=0; o.dy=0 }
@@ -59,9 +59,9 @@ export default defineNuxtPlugin(() => {
     setInterval(() => {
       if (!glitching) {
         const t = (Date.now()-t0)/1000
-        offsets[0].dx=Math.sin(t*0.7);     offsets[0].dy=Math.cos(t*0.5)*0.5
-        offsets[1].dx=Math.sin(t*0.9+2);   offsets[1].dy=Math.cos(t*0.6+1)*0.5
-        offsets[2].dx=Math.sin(t*0.8+4);   offsets[2].dy=Math.cos(t*0.7+3)*0.5
+        offsets[0].dx=Math.sin(t*0.7)*3;    offsets[0].dy=Math.cos(t*0.5)*1.5
+        offsets[1].dx=Math.sin(t*0.9+2)*3; offsets[1].dy=Math.cos(t*0.6+1)*1.5
+        offsets[2].dx=Math.sin(t*0.8+4)*3; offsets[2].dy=Math.cos(t*0.7+3)*1.5
       }
       postMessage(offsets.map(o=>({dx:o.dx,dy:o.dy})))
     }, 50)
@@ -78,7 +78,7 @@ export default defineNuxtPlugin(() => {
     dynLink.href = canvas.toDataURL('image/png')
   }
 
-  fetch('/favicon.svg')
+  fetch('/favicon__no-glitch.svg')
     .then(r => r.text())
     .then((svgText) => {
       const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml')
