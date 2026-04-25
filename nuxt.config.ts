@@ -96,7 +96,7 @@ export default defineNuxtConfig({
 
   umami: {
     ignoreLocalhost: true,
-    performance: false,
+    performance: true,
   },
 
   vite: {
