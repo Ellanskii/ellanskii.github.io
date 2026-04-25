@@ -19,6 +19,10 @@ export default defineNuxtConfig({
           content: 'Senior Frontend Developer с 9+ годами опыта. Vue 3, Nuxt 4, TypeScript.',
         },
       ],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '16x16 32x32 64x64' },
+      ],
     },
   },
 
