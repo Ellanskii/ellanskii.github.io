@@ -20,8 +20,8 @@ export default defineNuxtConfig({
         },
       ],
       link: [
+        // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '16x16 32x32 64x64' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '16x16 32x32 64x64' },
       ],
     },
   },

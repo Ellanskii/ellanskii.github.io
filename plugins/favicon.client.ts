@@ -6,11 +6,12 @@ export default defineNuxtPlugin(() => {
   if (!ctx) return { provide: { faviconCanvas: canvas } }
   const c = ctx
 
-  document.querySelectorAll('link[rel="icon"], link[rel="shortcut icon"]').forEach(el => el.remove())
+  const staticLinks = [...document.querySelectorAll<HTMLLinkElement>('link[rel="icon"], link[rel="shortcut icon"]')]
+
   const dynLink = document.createElement('link')
   dynLink.rel = 'icon'
   dynLink.type = 'image/png'
-  document.head.appendChild(dynLink)
+  let active = false
 
   type Group = { color: string; rects: [number, number, number, number][] }
   type Offset = { dx: number; dy: number }
@@ -73,10 +74,26 @@ export default defineNuxtPlugin(() => {
   URL.revokeObjectURL(url)
 
   worker.onmessage = ({ data }: MessageEvent<Offset[]>) => {
-    if (!groups.length) return
+    if (!active || !groups.length) return
     draw(data)
     dynLink.href = canvas.toDataURL('image/png')
   }
+
+  function startAnim() {
+    staticLinks.forEach(el => el.remove())
+    document.head.appendChild(dynLink)
+    active = true
+  }
+
+  function stopAnim() {
+    active = false
+    // dynLink.remove()
+    // staticLinks.forEach(el => document.head.appendChild(el))
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    document.hidden ? startAnim() : stopAnim()
+  })
 
   fetch('/favicon__no-glitch.svg')
     .then(r => r.text())
