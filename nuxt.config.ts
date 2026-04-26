@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
     'nuxt-umami',
-    '@nuxt/fonts',
+    // '@nuxt/fonts',
   ],
 
   css: ['~/assets/css/main.css'],
