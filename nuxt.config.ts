@@ -11,6 +11,13 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  icon: {
+    customCollections: [{
+      prefix: 'ellanskii',
+      dir: './assets/icons',
+    }]
+  },
+
   app: {
     head: {
       title: 'Илья Элланский — Senior Frontend Developer',
