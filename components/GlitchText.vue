@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  tag?: string
+  as?: string | Component
   text?: string
   animate?: boolean
   intensity?: number
 }>(), {
-  tag: 'span',
+  as: 'span',
   animate: false,
   intensity: 3,
 })
@@ -131,7 +131,7 @@ watch(() => props.animate, (val) => val ? startAnimation() : stopAnimation())
 <template>
   <ClientOnly>
     <component
-      :is="tag"
+      :is="as"
       v-bind="attrs"
       class="glitch-root"
       :class="resolvedMode"
@@ -160,7 +160,7 @@ watch(() => props.animate, (val) => val ? startAnimation() : stopAnimation())
     </component>
 
     <template #fallback>
-      <component :is="tag" v-bind="attrs" class="glitch-root">
+      <component :is="as" v-bind="attrs" class="glitch-root">
         <slot>{{ text }}</slot>
       </component>
     </template>
