@@ -8,7 +8,7 @@ export default defineContentConfig({
     }),
     articles: defineCollection({
       type: 'page',
-      source: 'articles/*.md',
+      source: [{ include: 'articles/*.md' }, { include: 'en/articles/*.md' }],
       schema: z.object({
         date: z.string(),
         description: z.string().optional(),

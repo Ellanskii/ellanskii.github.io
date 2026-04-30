@@ -4,6 +4,7 @@
     "description": "Senior Frontend Developer with 9+ years of experience. Vue 3, Nuxt 4, TypeScript."
   },
   "nav": {
+    "home": "Home",
     "resume": "Resume",
     "articles": "Notes"
   },

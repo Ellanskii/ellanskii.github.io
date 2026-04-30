@@ -3,12 +3,20 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@vueuse/nuxt',
-    '@nuxtjs/fontaine',
     '@nuxtjs/i18n',
     'nuxt-umami',
+    // TODO does it even has effect?
+    // '@nuxt/fonts',
   ],
 
   css: ['~/assets/css/main.css'],
+
+  icon: {
+    customCollections: [{
+      prefix: 'ellanskii',
+      dir: './assets/icons',
+    }]
+  },
 
   app: {
     head: {
@@ -19,7 +27,12 @@ export default defineNuxtConfig({
           content: 'Senior Frontend Developer с 9+ годами опыта. Vue 3, Nuxt 4, TypeScript.',
         },
       ],
+      link: [
+        // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '16x16 32x32 64x64' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      ],
     },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
 
   i18n: {

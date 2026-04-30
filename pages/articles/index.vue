@@ -1,8 +1,13 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
-const { data: articles } = await useAsyncData('articles-list',
-  () => queryCollection('articles').order('date', 'DESC').all(),
+const { data: articles } = await useAsyncData(
+  'articles-list',
+  () => queryCollection('articles')
+    .where('path', 'LIKE', `${locale.value === 'en' ? '/en/articles' : '/articles'}/%`)
+    .order('date', 'DESC')
+    .all(),
+  { watch: [locale] },
 )
 
 useSeoMeta({

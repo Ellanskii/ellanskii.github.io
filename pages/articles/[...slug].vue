@@ -2,14 +2,15 @@
 const route = useRoute()
 const { locale } = useI18n()
 
-const contentPath = computed(() => {
-  const path = route.path
-  return locale.value === 'en' ? path.replace(/^\/en/, '') : path
-})
-
 const { data } = await useAsyncData(
   () => `article-${route.path}`,
-  () => queryCollection('articles').path(contentPath.value).first(),
+  async () => {
+    // Try locale-specific path first (e.g. /en/articles/foo),
+    // fall back to the default path for articles without a translation
+    const fallback = locale.value === 'en' ? route.path.replace(/^\/en/, '') : route.path
+    return await queryCollection('articles').path(route.path).first()
+      ?? await queryCollection('articles').path(fallback).first()
+  },
 )
 
 useSeoMeta({
