@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components'
+
 const { locale, locales } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
@@ -12,24 +14,29 @@ useHead(() => ({ htmlAttrs: i18nHead.value.htmlAttrs }))
     <header class="border-b border-gray-200 dark:border-gray-800 print:hidden">
       <nav class="container mx-auto px-4 py-4">
         <div class="flex items-center justify-between">
-            <NuxtLink :to="localePath({ path: '/' })" class="font-bold hover:text-primary transition-colors">
-            {{ $t('site.title') }}
-          </NuxtLink>
+          <GlitchText 
+            :as="NuxtLink" 
+            :to="localePath({ path: '/' })" 
+            :text="$t('nav.home')"
+            class="outline-none"
+          >
+             <UIcon name="i-ellanskii:ie" class="w-8 h-8" />
+          </GlitchText>
           <div class="flex items-center gap-6">
-            <NuxtLink
+            <GlitchText
+              :as="NuxtLink" 
               :to="localePath({ path: '/resume' })"
-              class="text-sm hover:text-primary transition-colors"
-              active-class="text-primary font-medium"
+              class="outline-none"
             >
               {{ $t('nav.resume') }}
-            </NuxtLink>
-            <NuxtLink
+            </GlitchText>
+            <GlitchText
+              :as="NuxtLink" 
               :to="localePath({ path: '/articles' })"
-              class="text-sm hover:text-primary transition-colors"
-              active-class="text-primary font-medium"
+              class="outline-none"
             >
               {{ $t('nav.articles') }}
-            </NuxtLink>
+            </GlitchText>
             <div class="flex items-center gap-1 text-sm font-medium">
               <NuxtLink
                 v-for="loc in locales"
