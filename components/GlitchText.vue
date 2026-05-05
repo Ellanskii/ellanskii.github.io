@@ -266,14 +266,14 @@ watch(() => shouldAnimate.value, (animate) => {
 /* Static glitch effect for active links */
 .glitch-root.router-link-active .gl-layer:nth-child(3),
 .glitch-root.router-link-exact-active .gl-layer:nth-child(3) {
-  --dx: 3px;
-  --dy: 2px;
+  --dx: 0px;
+  --dy: -1px;
 }
 
 .glitch-root.router-link-active .gl-layer:nth-child(4),
 .glitch-root.router-link-exact-active .gl-layer:nth-child(4) {
   --dx: -2px;
-  --dy: -1px;
+  --dy: 1px;
 }
 
 .glitch-root.router-link-active .gl-layer:nth-child(5),
