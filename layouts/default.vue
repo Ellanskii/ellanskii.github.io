@@ -48,7 +48,6 @@ useHead(() => ({ htmlAttrs: i18nHead.value.htmlAttrs }))
                 {{ loc.code.toUpperCase() }}
               </NuxtLink>
             </div>
-            <!-- <ThemeSwitcher /> -->
             <UColorModeSwitch />
           </div>
         </div>
