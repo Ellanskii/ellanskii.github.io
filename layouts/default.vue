@@ -18,7 +18,7 @@ useHead(() => ({ htmlAttrs: i18nHead.value.htmlAttrs }))
             :as="NuxtLink" 
             :to="localePath({ path: '/' })" 
             :text="$t('nav.home')"
-            class="outline-none"
+            class="outline-none w-8 h-8"
           >
              <UIcon name="i-ellanskii:ie" class="w-8 h-8" />
           </GlitchText>
@@ -26,14 +26,14 @@ useHead(() => ({ htmlAttrs: i18nHead.value.htmlAttrs }))
             <GlitchText
               :as="NuxtLink" 
               :to="localePath({ path: '/resume' })"
-              class="outline-none"
+              class="outline-none font-bold"
             >
               {{ $t('nav.resume') }}
             </GlitchText>
             <GlitchText
               :as="NuxtLink" 
               :to="localePath({ path: '/articles' })"
-              class="outline-none"
+              class="outline-none font-bold"
             >
               {{ $t('nav.articles') }}
             </GlitchText>
@@ -48,7 +48,7 @@ useHead(() => ({ htmlAttrs: i18nHead.value.htmlAttrs }))
                 {{ loc.code.toUpperCase() }}
               </NuxtLink>
             </div>
-            <ThemeSwitcher />
+            <UColorModeSwitch />
           </div>
         </div>
       </nav>
