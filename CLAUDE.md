@@ -89,11 +89,7 @@ pnpm lint         # eslint
 
 ## Identity & Design Language
 
-The glitch effect is the visual identity — three-channel color split with `mix-blend-mode`.
-
-- **Dark theme** → RGB additive (`screen`): R `#ff2020`, G `#00ee55`, B `#1a55ff` → white
-- **Light theme** → CMY subtractive (`multiply`): C `#00b4d8`, M `#e040a0`, Y `#f5c800` → black
+Глитч-эффект — визуальная идентичность сайта: трёхканальное цветовое смещение через `mix-blend-mode`. Детали — в `components/glitch/CLAUDE.md`.
 
 **Logo mark** — geometric "IE" initials: 1 vertical bar + 3 horizontal bars, SVG 64×64 grid.  
-**Favicon** — animated canvas in `plugins/favicon.client.ts`, three animation modes: idle drift, hover burst, glitch burst.  
-**Glitch components** — see `components/glitch/CLAUDE.md`.
+**Favicon** — animated canvas in `plugins/favicon.client.ts`, three animation modes: idle drift, hover burst, glitch burst.
