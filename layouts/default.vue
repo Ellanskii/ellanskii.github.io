@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { NuxtLink } from '#components'
+import { en, ru } from '@nuxt/ui/locale'
 
-const { locale, locales } = useI18n()
+const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
 
@@ -48,6 +49,11 @@ useHead(() => ({ htmlAttrs: i18nHead.value.htmlAttrs }))
                 {{ loc.code.toUpperCase() }}
               </NuxtLink>
             </div>
+            <ULocaleSelect
+              :model-value="locale"
+              :locales="[en, ru]"
+              @update:model-value="setLocale($event as 'en' | 'ru')"
+            />
             <UColorModeSwitch />
           </div>
         </div>
