@@ -2,18 +2,18 @@
 
 TODO
 
-## Цвета
+## Colors
 
 - **Dark** (`mix-blend-mode: screen`): R `#ff2020`, G `#00ee55`, B `#1a55ff`
 - **Light** (`mix-blend-mode: multiply`): C `#00b4d8`, M `#e040a0`, Y `#f5c800`
 
 ---
 
-## TODO: исследовать точность цветов
+## TODO: investigate color accuracy
 
-Оба набора не дают чистого результата на пересечении — зелёный канал виновник в обоих случаях.
+Neither set produces a clean result at full overlap — the green channel is the culprit in both cases.
 
-- Dark (`screen`): G ≈ `#f5` вместо `#ff` → пятно не белое, а чуть тонированное
-- Light (`multiply`): G ≈ `#23` вместо `#00` → пятно не чёрное
+- Dark (`screen`): G ≈ `#f5` instead of `#ff` → overlap tinted, not pure white
+- Light (`multiply`): G ≈ `#23` instead of `#00` → overlap tinted, not pure black
 
-Варианты: оставить / перейти на чистые `#ff0000/00ff00/0000ff` и `#00ffff/ff00ff/ffff00` / подобрать тёплые с гарантированным результатом.
+Options: leave as-is / switch to pure `#ff0000/00ff00/0000ff` and `#00ffff/ff00ff/ffff00` / find warm values that still guarantee a clean result.

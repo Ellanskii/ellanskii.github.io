@@ -89,7 +89,17 @@ pnpm lint         # eslint
 
 ## Identity & Design Language
 
-Глитч-эффект — визуальная идентичность сайта: трёхканальное цветовое смещение через `mix-blend-mode`. Детали — в `components/glitch/CLAUDE.md`.
+The glitch effect is the visual identity — three-channel color split via `mix-blend-mode`. Details in `components/glitch/CLAUDE.md`.
 
 **Logo mark** — geometric "IE" initials: 1 vertical bar + 3 horizontal bars, SVG 64×64 grid.  
 **Favicon** — animated canvas in `plugins/favicon.client.ts`, three animation modes: idle drift, hover burst, glitch burst.
+
+### Wireframe / Blueprint aesthetic
+
+Overall theme: technical blueprint, evoking development and engineering. Three layers:
+
+1. **Fixed diagonal background** across the whole site — fine 45° hatching, does not scroll.
+2. **Opaque panels** under content blocks — elements sit on top of the grid, covering it.
+3. **Wireframe outlines** — blocks are bordered like components in a mockup, with lines extending slightly past corners (technical drawing style).
+
+Reference: [tailwindcss.com/blog](https://tailwindcss.com/blog).
