@@ -39,8 +39,7 @@ components/
   ThemeSwitcher.vue
 
 content/
-  resume.md
-  articles/
+  ru/                     # default locale content (resume.md, articles/)
   en/                     # English content variants
 
 i18n/locales/
