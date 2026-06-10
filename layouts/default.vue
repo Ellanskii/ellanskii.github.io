@@ -24,21 +24,23 @@ useHead(() => ({ htmlAttrs: i18nHead.value.htmlAttrs }))
              <UIcon name="i-ellanskii:ie" class="w-8 h-8" />
           </GlitchText>
           <div class="flex items-center gap-6">
-            <GlitchText
-              :as="NuxtLink" 
-              :to="localePath({ path: '/resume' })"
-              class="outline-none font-bold"
-            >
-              {{ $t('nav.resume') }}
-            </GlitchText>
-            <GlitchText
-              :as="NuxtLink" 
-              :to="localePath({ path: '/articles' })"
-              class="outline-none font-bold"
-            >
-              {{ $t('nav.articles') }}
-            </GlitchText>
-            <div class="flex items-center gap-1 text-sm font-medium">
+            <div class="hidden md:flex items-center gap-6">
+              <GlitchText
+                :as="NuxtLink" 
+                :to="localePath({ path: '/resume' })"
+                class="outline-none font-bold"
+              >
+                {{ $t('nav.resume') }}
+              </GlitchText>
+              <GlitchText
+                :as="NuxtLink" 
+                :to="localePath({ path: '/articles' })"
+                class="outline-none font-bold"
+              >
+                {{ $t('nav.articles') }}
+              </GlitchText>
+            </div>
+            <!-- <div class="flex items-center gap-1 text-sm font-medium">
               <NuxtLink
                 v-for="loc in locales"
                 :key="loc.code"
@@ -48,7 +50,7 @@ useHead(() => ({ htmlAttrs: i18nHead.value.htmlAttrs }))
               >
                 {{ loc.code.toUpperCase() }}
               </NuxtLink>
-            </div>
+            </div> -->
             <ULocaleSelect
               :model-value="locale"
               :locales="[en, ru]"
