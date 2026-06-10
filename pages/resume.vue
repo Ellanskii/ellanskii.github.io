@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { locale, t } = useI18n()
 
-const contentPath = computed(() => locale.value === 'en' ? '/en/resume' : '/resume')
+const contentPath = computed(() => `/${locale.value}/resume`)
 
 const { data: page } = await useAsyncData(
   () => `resume-${locale.value}`,

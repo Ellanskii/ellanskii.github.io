@@ -5,11 +5,12 @@ const { locale } = useI18n()
 const { data } = await useAsyncData(
   () => `article-${route.path}`,
   async () => {
-    // Try locale-specific path first (e.g. /en/articles/foo),
-    // fall back to the default path for articles without a translation
-    const fallback = locale.value === 'en' ? route.path.replace(/^\/en/, '') : route.path
-    return await queryCollection('articles').path(route.path).first()
-      ?? await queryCollection('articles').path(fallback).first()
+    // Map the route path to its locale folder (e.g. /articles/foo -> /ru/articles/foo,
+    // /en/articles/foo -> /en/articles/foo), falling back to the default locale
+    // for articles without a translation
+    const bare = route.path.replace(/^\/en/, '')
+    return await queryCollection('articles').path(`/${locale.value}${bare}`).first()
+      ?? await queryCollection('articles').path(`/ru${bare}`).first()
   },
 )
 

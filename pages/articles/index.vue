@@ -4,7 +4,7 @@ const { t, locale } = useI18n()
 const { data: articles } = await useAsyncData(
   'articles-list',
   () => queryCollection('articles')
-    .where('path', 'LIKE', `${locale.value === 'en' ? '/en/articles' : '/articles'}/%`)
+    .where('path', 'LIKE', `/${locale.value}/articles/%`)
     .order('date', 'DESC')
     .all(),
   { watch: [locale] },
@@ -42,7 +42,7 @@ useSeoMeta({
           {{ article.description }}
         </p>
         <template #footer>
-          <UButton variant="ghost" size="sm" :to="article.path">
+          <UButton variant="ghost" size="sm" :to="article.path.replace(/^\/ru/, '')">
             {{ $t('articles.read_more') }}
           </UButton>
         </template>
