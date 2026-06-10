@@ -1,6 +1,6 @@
 # ellanskii.dev — Project Context
 
-Personal site: CV, blog, portfolio. Author — Ilya Ellanskii, Senior Frontend Developer.
+Personal site: CV, blog, portfolio. Author — Ilia Ellanskii, Senior Frontend Developer.
 
 **Primary quality goal: 100/100/100/100 in Lighthouse** (Performance, Accessibility, Best Practices, SEO). Every architectural decision should be weighed against this. The stack already has several optimizations toward it: static prerender, Beasties for critical CSS, `payloadExtraction: false`.
 
